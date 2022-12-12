@@ -35,6 +35,7 @@ I am 28 years old, now I work as a health safety engineer. I think that my job l
 ## Education
 #### Online cources
 * RS School JavaScript/Front-end. Stage 0
+* RS School JavaScript/Front-end. Stage 1
 
 #### Higher education
 * Kalashnikov Izhevsk State Technical University (ISTU), health safety engineer

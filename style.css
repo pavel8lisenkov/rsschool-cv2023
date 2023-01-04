@@ -133,16 +133,6 @@ p {
   background-color: #68a2b4;
 }
 
-/* @media (max-width: 640px) {
-  .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 10;
-  }
-} */
-
 .header__container {
   min-height: 60px;
   display: flex;
@@ -164,52 +154,52 @@ p {
 @media (max-width: 640px) {
   .menu__icon {
     display: block;
-    position: relative;
     width: 30px;
-    height: 16px;
+    height: 22px;
     cursor: pointer;
     z-index: 10;
+    position: relative;
   }
 }
 
 .menu__icon._active {
 }
 
-.menu__icon::before, .menu__icon::after, .menu__icon span {
+.menu__icon span,
+.menu__icon::before,
+.menu__icon::after {
   position: absolute;
-  left: 0;
-  height: 10%;
+  top: 50%;
+  margin-top: -1px;
+  left: 50%;
+  margin-left: -10px;
   width: 100%;
-  transition: all 0.3s ease 0s;
+  height: 2px;
   background-color: #ffffff;
 }
 
 .menu__icon::before, .menu__icon::after {
   content: "";
+  transition: 0.2s;
 }
 .menu__icon::before {
-  top: 0;
+  transform: translateY(-8px);
 }
 
 .menu__icon::after {
-  bottom: 0;
+  transform: translateY(8px);
 }
-.menu__icon span {
-  top: 50%;
-  transform: scale(1) translate(0px, -50%);
-}
+
 .menu__icon._active span {
-  transform: scale(0) translate(0px, -50%);
+  height: 0;
 }
 
 .menu__icon._active::before {
-  top: 50%;
-  transform: rotate(-45deg) translate(0px, -55%);
+  transform: rotate(45deg);
 }
 
 .menu__icon._active::after {
-  bottom: 50%;
-  transform: rotate(45deg) translate(0px, 50%);
+  transform: rotate(-45deg);
 }
 
 .menu__body {
@@ -232,17 +222,6 @@ p {
 
   .menu__body._active {
     left: 0;
-  }
-
-  .menu__body._active::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    min-height: 60px;
-    background-color: #68a2b4;
-    z-index: 2;
   }
 }
 
